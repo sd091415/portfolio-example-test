@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Tailwind css에 기존의 css가 덮히는 것을 방지합니다 */
+  h1 { @apply text-3xl font-bold mb-4 mt-2; }
+  h2 { @apply text-2xl font-bold mb-3 mt-2; }
+  h3 { @apply text-xl font-bold mb-2 mt-1; }
+  ul { @apply list-disc list-inside mb-4 ml-2; }
+  ol { @apply list-decimal list-inside mb-4 ml-2; }
+  a { @apply text-blue-600 hover:underline; }
+
+  fieldset {
+    @apply border border-solid border-gray-300 p-4 m-2 mb-6 rounded block;
+    min-width: min-content;
+  }
+  
+  legend {
+    @apply px-2 font-bold text-gray-700;
+    width: auto;
+  }
+
+  table {
+    @apply w-full border-collapse border border-gray-300 my-4;
+  }
+
+  th, td {
+    @apply border border-gray-300 px-4 py-2 text-left;
+  }
+
+  th {
+    @apply bg-gray-100 font-bold text-gray-700;
+  }
+
+  /* 짝수 행만 색을 넣습니다. */
+  tr:nth-child(even) {
+    @apply bg-gray-50;
+  }
+}
